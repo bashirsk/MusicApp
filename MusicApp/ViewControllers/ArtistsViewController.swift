@@ -50,8 +50,8 @@ class ArtistsViewController: BaseViewController, UISearchBarDelegate {
         return self.itemForIdenxPath(indexPath: pIndexPath) as! AlbumInfo
     }
 }
-C
-extension ArtistsViewontroller {
+
+extension ArtistsViewController {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
