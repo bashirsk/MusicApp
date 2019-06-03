@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let theTableView = self.tableView else { return }
@@ -35,6 +35,10 @@ class BaseViewController: UIViewController {
     
     // MARK:- TableView set up
     
+    /**
+     - Can be used to both basic and tableview with sections
+     */
+
     var tableViewArray: [[Any]] {
         return []
     }
@@ -49,7 +53,7 @@ class BaseViewController: UIViewController {
 extension BaseViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in pTableView: UITableView) -> Int {
-       return self.tableViewArray.count
+        return self.tableViewArray.count
     }
     
     func tableView(_ pTableView: UITableView, numberOfRowsInSection pSection: Int) -> Int {
