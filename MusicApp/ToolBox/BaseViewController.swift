@@ -12,10 +12,12 @@ class BaseViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let theTableView = self.tableView else { return }
-        theTableView.mp_setUpTableView(with: self)
+        theTableView.ma_setUpTableView(with: self)
     }
     
     // MARK:- UIViewController control set up

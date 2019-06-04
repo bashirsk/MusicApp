@@ -8,18 +8,22 @@
 
 import UIKit
 
-class ArtistsViewController: BaseViewController, UISearchBarDelegate {
+class ArtistsViewController: BaseViewController {
     
     private let cellId = "AlbumCell"
     var albumInfo = [AlbumInfo]()
     let apiService = APIService()
     let searchController = UISearchController(searchResultsController: nil)
     
+    // MARK:- UIViewController Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpSearchBar()
     }
     
+    //MARK:- Search bar set up
+
     private func setUpSearchBar() {
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
@@ -29,18 +33,8 @@ class ArtistsViewController: BaseViewController, UISearchBarDelegate {
         self.searchController.definesPresentationContext = true
     }
     
-    func searchBar(_ pSearchBar: UISearchBar, textDidChange pSearchText: String) {
-        let searchTerm = pSearchText.replacingOccurrences(of: " ", with: "+")
-        apiService.fetchGenericData(urlString:"https://api.music.apple.com/v1/catalog/us/search?term=\(searchTerm)&types=albums")
-        { (pAlbumInfo: AlbumObject?, pError) in
-            if let albumData = pAlbumInfo?.results.albums.data {
-                self.albumInfo = albumData
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
+    
+    // MARK:- TableView set up
     
     override var tableViewArray: [[Any]] {
         return [self.albumInfo]
@@ -51,6 +45,8 @@ class ArtistsViewController: BaseViewController, UISearchBarDelegate {
     }
 }
 
+//MARK:- UITableViewDelegate, UITableViewDataSource
+
 extension ArtistsViewController {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -58,12 +54,12 @@ extension ArtistsViewController {
         label.text = "Please enter a album search term"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        label.textColor = .black
+        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         return label
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.albumInfo.count > 0 ? 0 : 250
+    func tableView(_ pTableView: UITableView, heightForHeaderInSection pSection: Int) -> CGFloat {
+        return self.tableViewArray[pSection].count > 0 ? 0 : 250
     }
     
     override func tableView(_ pTableView: UITableView, cellForRowAt pIndexPath: IndexPath) -> UITableViewCell {
@@ -79,5 +75,23 @@ extension ArtistsViewController {
     
     func tableView(_ pTableView: UITableView, heightForRowAt pIndexPath: IndexPath) -> CGFloat {
         return 132
+    }
+}
+
+//MARK:- UITableViewDelegate
+
+extension ArtistsViewController: UISearchBarDelegate {
+    
+    func searchBar(_ pSearchBar: UISearchBar, textDidChange pSearchText: String) {
+        let searchTerm = pSearchText.replacingOccurrences(of: " ", with: "+")
+        apiService.fetchGenericData(urlString:"https://api.music.apple.com/v1/catalog/us/search?term=\(searchTerm)&types=albums")
+        { (pAlbumInfo: AlbumObject?, pError) in
+            if let albumData = pAlbumInfo?.results.albums.data {
+                self.albumInfo = albumData
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 }

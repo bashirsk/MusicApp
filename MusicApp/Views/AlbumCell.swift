@@ -17,7 +17,7 @@ class AlbumCell: UITableViewCell {
         
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.albumImageView.mp_setRoundedBorder(pCornerRadius: 10)
+        self.albumImageView.ma_setRoundedBorder(pCornerRadius: 10)
     }
     
     var album: AlbumInfo! {
@@ -25,8 +25,8 @@ class AlbumCell: UITableViewCell {
             self.albumNameLabel.text = album.attributes.name
             self.artistNameLabel.text = album.attributes.artistName
             guard let imageURL = album.attributes.artwork.imageURL(width: 100, height: 100) else { return }
-            self.albumImageView.mp_downloadAndCacheImage(with: imageURL)
-            self.albumReleaseDateLabel.text = String(album.attributes.releaseDate.mp_toDate.mp_toYear)
+            self.albumImageView.ma_downloadAndCacheImage(with: imageURL)
+            self.albumReleaseDateLabel.text = String(album.attributes.releaseDate.ma_toDate.ma_toYear)
         }
     }
 }

@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61AFC55022A45D3500756A0E /* UIImageView+MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC54F22A45D3500756A0E /* UIImageView+MP.swift */; };
-		61AFC55222A4E8C200756A0E /* UIView+MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC55122A4E8C200756A0E /* UIView+MP.swift */; };
 		61AFC55822A5B46D00756A0E /* AlbumObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC55722A5B46D00756A0E /* AlbumObject.swift */; };
-		61AFC55C22A5B62900756A0E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC55B22A5B62900756A0E /* String.swift */; };
-		61AFC55E22A5C4DC00756A0E /* Date+MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC55D22A5C4DC00756A0E /* Date+MP.swift */; };
+		61AFC56022A6EE8600756A0E /* String+MA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC55F22A6EE8600756A0E /* String+MA.swift */; };
+		61AFC56222A6EEB000756A0E /* UITableView+MA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC56122A6EEB000756A0E /* UITableView+MA.swift */; };
+		61AFC56422A6EF4300756A0E /* UIImageView+MA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC56322A6EF4300756A0E /* UIImageView+MA.swift */; };
+		61AFC56622A6EF6800756A0E /* UIView+MA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC56522A6EF6800756A0E /* UIView+MA.swift */; };
+		61AFC56822A6EFC400756A0E /* Date+MA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFC56722A6EFC400756A0E /* Date+MA.swift */; };
 		61C5D0AC22A3CC2F0007007E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D0AB22A3CC2F0007007E /* AppDelegate.swift */; };
 		61C5D0B122A3CC2F0007007E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C5D0AF22A3CC2F0007007E /* Main.storyboard */; };
 		61C5D0B322A3CC320007007E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C5D0B222A3CC320007007E /* Assets.xcassets */; };
 		61C5D0B622A3CC320007007E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C5D0B422A3CC320007007E /* LaunchScreen.storyboard */; };
-		61C5D0C522A3EBB80007007E /* UITableView+MP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D0C422A3EBB80007007E /* UITableView+MP.swift */; };
 		61C5D0C722A3ECAB0007007E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D0C622A3ECAB0007007E /* BaseViewController.swift */; };
 		61C5D0CA22A3F5CD0007007E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D0C922A3F5CD0007007E /* APIService.swift */; };
 		61C5D0CC22A3F7820007007E /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D0CB22A3F7820007007E /* ArtistsViewController.swift */; };
@@ -27,18 +27,18 @@
 /* Begin PBXFileReference section */
 		0D50F89193E05BDE16B14C7B /* Pods_MusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		592FD01D3B3BF1222D7C056C /* Pods-MusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicApp/Pods-MusicApp.release.xcconfig"; sourceTree = "<group>"; };
-		61AFC54F22A45D3500756A0E /* UIImageView+MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MP.swift"; sourceTree = "<group>"; };
-		61AFC55122A4E8C200756A0E /* UIView+MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MP.swift"; sourceTree = "<group>"; };
 		61AFC55722A5B46D00756A0E /* AlbumObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumObject.swift; sourceTree = "<group>"; };
-		61AFC55B22A5B62900756A0E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		61AFC55D22A5C4DC00756A0E /* Date+MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+MP.swift"; sourceTree = "<group>"; };
+		61AFC55F22A6EE8600756A0E /* String+MA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MA.swift"; sourceTree = "<group>"; };
+		61AFC56122A6EEB000756A0E /* UITableView+MA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+MA.swift"; sourceTree = "<group>"; };
+		61AFC56322A6EF4300756A0E /* UIImageView+MA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MA.swift"; sourceTree = "<group>"; };
+		61AFC56522A6EF6800756A0E /* UIView+MA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MA.swift"; sourceTree = "<group>"; };
+		61AFC56722A6EFC400756A0E /* Date+MA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+MA.swift"; sourceTree = "<group>"; };
 		61C5D0A822A3CC2F0007007E /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C5D0AB22A3CC2F0007007E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C5D0B022A3CC2F0007007E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61C5D0B222A3CC320007007E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C5D0B522A3CC320007007E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C5D0B722A3CC320007007E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61C5D0C422A3EBB80007007E /* UITableView+MP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+MP.swift"; sourceTree = "<group>"; };
 		61C5D0C622A3ECAB0007007E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		61C5D0C922A3F5CD0007007E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		61C5D0CB22A3F7820007007E /* ArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
@@ -154,11 +154,11 @@
 		61C5D0C322A3EB4B0007007E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				61C5D0C422A3EBB80007007E /* UITableView+MP.swift */,
-				61AFC54F22A45D3500756A0E /* UIImageView+MP.swift */,
-				61AFC55122A4E8C200756A0E /* UIView+MP.swift */,
-				61AFC55B22A5B62900756A0E /* String.swift */,
-				61AFC55D22A5C4DC00756A0E /* Date+MP.swift */,
+				61AFC56722A6EFC400756A0E /* Date+MA.swift */,
+				61AFC55F22A6EE8600756A0E /* String+MA.swift */,
+				61AFC56122A6EEB000756A0E /* UITableView+MA.swift */,
+				61AFC56322A6EF4300756A0E /* UIImageView+MA.swift */,
+				61AFC56522A6EF6800756A0E /* UIView+MA.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,17 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AFC55222A4E8C200756A0E /* UIView+MP.swift in Sources */,
-				61C5D0C522A3EBB80007007E /* UITableView+MP.swift in Sources */,
-				61AFC55C22A5B62900756A0E /* String.swift in Sources */,
+				61AFC56422A6EF4300756A0E /* UIImageView+MA.swift in Sources */,
 				61C5D0AC22A3CC2F0007007E /* AppDelegate.swift in Sources */,
-				61AFC55022A45D3500756A0E /* UIImageView+MP.swift in Sources */,
 				61D7569522A4466100F7308B /* AlbumCell.swift in Sources */,
+				61AFC56622A6EF6800756A0E /* UIView+MA.swift in Sources */,
+				61AFC56022A6EE8600756A0E /* String+MA.swift in Sources */,
 				61C5D0CA22A3F5CD0007007E /* APIService.swift in Sources */,
 				61C5D0CC22A3F7820007007E /* ArtistsViewController.swift in Sources */,
 				61AFC55822A5B46D00756A0E /* AlbumObject.swift in Sources */,
+				61AFC56222A6EEB000756A0E /* UITableView+MA.swift in Sources */,
 				61C5D0C722A3ECAB0007007E /* BaseViewController.swift in Sources */,
-				61AFC55E22A5C4DC00756A0E /* Date+MP.swift in Sources */,
+				61AFC56822A6EFC400756A0E /* Date+MA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
