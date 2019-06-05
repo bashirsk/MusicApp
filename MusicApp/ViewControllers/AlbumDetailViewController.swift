@@ -30,7 +30,7 @@ class AlbumDetailViewController: BaseViewController {
         super.viewDidLoad()
         self.tableRows =  [.detailCell]
         self.tableView.contentInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
-        self.setHeaderImageView()
+        self.setUpHeaderImageView()
     }
     
     override func viewWillAppear(_ pAnimated: Bool) {
@@ -53,7 +53,7 @@ class AlbumDetailViewController: BaseViewController {
     }
 
     // Set up header  
-    private func setHeaderImageView() {
+    private func setUpHeaderImageView() {
         self.imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 300)
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.clipsToBounds = true
