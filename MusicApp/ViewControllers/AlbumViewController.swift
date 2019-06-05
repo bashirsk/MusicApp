@@ -21,7 +21,8 @@ class AlbumViewController: BaseViewController {
         super.viewDidLoad()
         self.setUpSearchBar()
     }
-    
+
+    // Pass album information to the AlbumDetailViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AlbumSegue" {
             let albumDetailViewController = segue.destination as! AlbumDetailViewController
@@ -39,8 +40,8 @@ class AlbumViewController: BaseViewController {
         self.searchController.dimsBackgroundDuringPresentation = false
         self.searchController.searchBar.delegate = self
         self.searchController.definesPresentationContext = true
+        self.searchController.searchBar.tintColor = .black
     }
-    
     
     // MARK:- TableView set up
     
@@ -49,7 +50,7 @@ class AlbumViewController: BaseViewController {
     }
     
     private func objectforIndexPath(_ pIndexPath: IndexPath) -> AlbumInfo {
-        return self.itemForIdenxPath(indexPath: pIndexPath) as! AlbumInfo
+        return self.itemForIndexPath(indexPath: pIndexPath) as! AlbumInfo
     }
 }
 
@@ -59,7 +60,7 @@ extension AlbumViewController {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
-        label.text = "Please enter a album search term"
+        label.text = "Please enter an album search term"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)

@@ -24,8 +24,9 @@ class AlbumCell: UITableViewCell {
         didSet {
             self.albumNameLabel.text = album.attributes.name
             self.artistNameLabel.text = album.attributes.artistName
-            guard let imageURL = album.attributes.artwork.imageURL(width: 100, height: 100) else { return }
-            self.albumImageView.ma_downloadAndCacheImage(with: imageURL)
+            if let imageURL = album.attributes.artwork.imageURL(width: 100, height: 100) {
+                self.albumImageView.ma_downloadImage(with: imageURL)
+            }
             self.albumReleaseDateLabel.text = String(album.attributes.releaseDate.ma_toDate.ma_toYear)
         }
     }

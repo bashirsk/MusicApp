@@ -10,8 +10,9 @@ import UIKit
 import SDWebImage
 
 extension UIImageView {
-    
-    func ma_downloadAndCacheImage(with pUrl: URL) {
+
+    // Use SDWebImage to download image and cache it 
+    func ma_downloadImage(with pUrl: URL) {
         self.sd_setImage(with: pUrl)
     }
 }

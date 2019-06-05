@@ -9,7 +9,8 @@
 import Foundation
 
 extension Date {
-    
+
+    // Get year from calendar
     var ma_toYear: Int {
         let year = Calendar.current.component(.year, from: self)
         return year

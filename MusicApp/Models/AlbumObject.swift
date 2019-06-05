@@ -27,7 +27,6 @@ struct Albums: Codable {
 
 // MARK: - Datum
 struct AlbumInfo: Codable {
-    let id, type, href: String
     var attributes: Attributes
 }
 
@@ -35,28 +34,25 @@ struct AlbumInfo: Codable {
 struct Attributes: Codable {
     let artwork: Artwork
     let artistName: String
-    let isSingle: Bool
     let url: String
     let isComplete: Bool
     let genreNames: [String]
     let trackCount: Int
-    let isMasteredForItunes: Bool
-    let releaseDate, name, recordLabel, copyright: String
+    let releaseDate, name, recordLabel: String
     let editorialNotes: EditorialNotes?
-    let contentRating: String?
 }
 
 // MARK: - Artwork
 struct Artwork: Codable {
-    let width, height: Int
-    let url, bgColor, textColor1, textColor2: String
-    let textColor3, textColor4: String
+    let url: String
 }
 
 extension Artwork {
-    func imageURL(width: Int, height: Int) -> URL? {
+    func imageURL(width pWidth: Int, height pHeight: Int) -> URL? {
         let url = self.url
-        let occurrences = url.replacingOccurrences(of: "{w}", with: "\(width)").replacingOccurrences(of: "{h}", with: "\(height)")
+
+        // Replace both {w} and {h} with actual size images we would like
+        let occurrences = url.replacingOccurrences(of: "{w}", with: "\(pWidth)").replacingOccurrences(of: "{h}", with: "\(pHeight)")
         return URL(string: occurrences)
     }
 }
