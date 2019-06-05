@@ -12,8 +12,6 @@ class BaseViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let theTableView = self.tableView else { return }

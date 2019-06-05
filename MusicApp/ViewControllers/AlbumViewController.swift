@@ -1,14 +1,14 @@
 //
-//  ArtistsViewController.swift
+//  AlbumViewController.swift
 //  MusicApp
 //
-//  Created by Bashir Sentongo on 02/06/2019.
+//  Created by Bashir Sentongo on 04/06/2019.
 //  Copyright © 2019 Bashir Sentongo. All rights reserved.
 //
 
 import UIKit
 
-class ArtistsViewController: BaseViewController {
+class AlbumViewController: BaseViewController {
     
     private let cellId = "AlbumCell"
     var albumInfo = [AlbumInfo]()
@@ -22,8 +22,16 @@ class ArtistsViewController: BaseViewController {
         self.setUpSearchBar()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AlbumSegue" {
+            let albumDetailViewController = segue.destination as! AlbumDetailViewController
+            let albumData = sender as? AlbumInfo
+            albumDetailViewController.albumInfo = albumData
+        }
+    }
+    
     //MARK:- Search bar set up
-
+    
     private func setUpSearchBar() {
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
@@ -47,7 +55,7 @@ class ArtistsViewController: BaseViewController {
 
 //MARK:- UITableViewDelegate, UITableViewDataSource
 
-extension ArtistsViewController {
+extension AlbumViewController {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
@@ -71,6 +79,8 @@ extension ArtistsViewController {
     
     func tableView(_ pTableView: UITableView, didSelectRowAt pIndexPath: IndexPath) {
         pTableView.deselectRow(at: pIndexPath, animated: true)
+        let selectedaAlbum = self.albumInfo[pIndexPath.row]
+        self.performSegue(withIdentifier: "AlbumSegue", sender: selectedaAlbum)
     }
     
     func tableView(_ pTableView: UITableView, heightForRowAt pIndexPath: IndexPath) -> CGFloat {
@@ -80,7 +90,7 @@ extension ArtistsViewController {
 
 //MARK:- UITableViewDelegate
 
-extension ArtistsViewController: UISearchBarDelegate {
+extension AlbumViewController: UISearchBarDelegate {
     
     func searchBar(_ pSearchBar: UISearchBar, textDidChange pSearchText: String) {
         let searchTerm = pSearchText.replacingOccurrences(of: " ", with: "+")
@@ -95,3 +105,4 @@ extension ArtistsViewController: UISearchBarDelegate {
         }
     }
 }
+

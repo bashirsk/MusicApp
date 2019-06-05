@@ -28,7 +28,7 @@ struct Albums: Codable {
 // MARK: - Datum
 struct AlbumInfo: Codable {
     let id, type, href: String
-    let attributes: Attributes
+    var attributes: Attributes
 }
 
 // MARK: - Attributes
