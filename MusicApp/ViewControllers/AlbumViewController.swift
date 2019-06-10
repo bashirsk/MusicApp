@@ -37,7 +37,7 @@ class AlbumViewController: BaseViewController {
         self.definesPresentationContext = true
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.delegate = self
         self.searchController.definesPresentationContext = true
         self.searchController.searchBar.tintColor = .black

@@ -19,7 +19,7 @@ class APIService {
         guard let url = URL(string: pUrlString) else { return }
         var request = URLRequest(url: url)
         request.setValue("Bearer \(developerToken)", forHTTPHeaderField: "Authorization")
-        let dataDask = URLSession.shared.dataTask(with: request) { (pData, pResponse, pError) in
+        URLSession.shared.dataTask(with: request) { (pData, pResponse, pError) in
             if let error = pError {
                 pCompletion(nil, error)
             }
@@ -30,7 +30,6 @@ class APIService {
             } catch let decodeError {
                 pCompletion(nil, decodeError)
             }
-        }
-        dataDask.resume()
+        }.resume()
     }
 }
