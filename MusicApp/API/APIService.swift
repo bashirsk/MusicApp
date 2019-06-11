@@ -10,7 +10,7 @@ import Foundation
 
 class APIService {
     
-    var developerToken = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjI1Mkg4NzZEMloifQ.eyJpYXQiOjE1NTk0NzA2OTIsImV4cCI6MTU3NTAyMjY5MiwiaXNzIjoiNVg5TkI5VFk3RCJ9.isHFMOh0BC5qJfraxS2LAa_O9xXG5fZLvv4yZy0KruPRvRSeuFSYchZvBb9ukvGFc7lwISL1b2y1FObiVqwT-A"
+    private var developerToken = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjI1Mkg4NzZEMloifQ.eyJpYXQiOjE1NTk0NzA2OTIsImV4cCI6MTU3NTAyMjY5MiwiaXNzIjoiNVg5TkI5VFk3RCJ9.isHFMOh0BC5qJfraxS2LAa_O9xXG5fZLvv4yZy0KruPRvRSeuFSYchZvBb9ukvGFc7lwISL1b2y1FObiVqwT-A"
     
     /**
      - A generic network request that be used to perform many other network calls
